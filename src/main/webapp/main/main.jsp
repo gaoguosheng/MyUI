@@ -29,72 +29,42 @@
                 border:false,
                 fit:true
             });
-            add();
         });
-        function add(){
-            for(var i=0; i<3; i++){
-                var p = $('<div/>').appendTo('body');
-                p.panel({
-                    title:'Title'+i,
-                    content:'<div style="padding:5px;">Content'+(i+1)+'</div>',
-                    height:100,
-                    closable:true,
-                    collapsible:true
-                });
-                $('#pp').portal('add', {
-                    panel:p,
-                    columnIndex:i
-                });
-            }
-            $('#pp').portal('resize');
-        }
-        function remove(){
-            $('#pp').portal('remove',$('#pgrid'));
-            $('#pp').portal('resize');
-        }
+
     </script>
 </head>
 <body class="easyui-layout">
 <div region="center" border="false">
     <div id="pp" style="position:relative">
         <div style="width:30%;">
-            <div title="Clock" style="text-align:center;background:#f3eeaf;height:150px;padding:5px;">
-                <object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=6,0,29,0" width="100" height="100">
-                    <param name="movie" value="http://www.respectsoft.com/onlineclock/analog.swf">
-                    <param name=quality value=high>
-                    <param name="wmode" value="transparent">
-                    <embed src="http://www.respectsoft.com/onlineclock/analog.swf" width="100" height="100" quality=high pluginspage="http://www.macromedia.com/shockwave/download/index.cgi?P1_Prod_Version=ShockwaveFlash" type="application/x-shockwave-flash" wmode="transparent"></embed>
-                </object>
+            <div title="任务中心" collapsible="true" closable="true" style="height:200px;padding:5px;">
+
             </div>
-            <div title="Tutorials" collapsible="true" closable="true" style="height:200px;padding:5px;">
+            <div title="公告新闻" closable="true" style="height:200px;text-align:center;">
 
             </div>
         </div>
         <div style="width:40%;">
-            <div id="pgrid" title="DataGrid" closable="true" style="height:200px;">
-                <table class="easyui-datagrid" style="width:650px;height:auto"
-                       fit="true" border="false"
+            <div title="工作日程" style="text-align:center;height:250px;padding:5px;">
+                <div class="easyui-calendar" style="width:180px;height:180px;"></div>
+            </div>
+            <div title="通讯录" closable="true" style="width:450px;height:200px;">
+                <table class="easyui-datagrid"
                        singleSelect="true"
-                       idField="itemid" url="">
+                       url="json/user.json">
                     <thead>
-                    <tr>
-                        <th field="itemid" width="60">Item ID</th>
-                        <th field="productid" width="60">Product ID</th>
-                        <th field="listprice" width="80" align="right">List Price</th>
-                        <th field="unitcost" width="80" align="right">Unit Cost</th>
-                        <th field="attr1" width="120">Attribute</th>
-                        <th field="status" width="50" align="center">Status</th>
-                    </tr>
+                        <tr>
+                            <th field="realname" width="100" >姓名</th>
+                            <th field="qq" width="100" >QQ</th>
+                            <th field="mobile" width="150">手机</th>
+                        </tr>
                     </thead>
                 </table>
             </div>
         </div>
         <div style="width:30%;">
-            <div title="Searching" iconCls="icon-search" closable="true" style="height:80px;padding:10px;">
+            <div title="全文检索" iconCls="icon-search" closable="true" style="height:80px;padding:10px;">
                 <input class="easyui-searchbox">
-            </div>
-            <div title="Graph" closable="true" style="height:200px;text-align:center;">
-
             </div>
         </div>
     </div>

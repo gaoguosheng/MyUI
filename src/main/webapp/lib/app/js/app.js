@@ -82,8 +82,8 @@ function f_dialog(id,data,fn){
     var myDialog =  $(dialog).dialog(
         {
             title:data.title,
-            width:data.width?data.width:640,
-            height:data.height?data.height:480,
+            width:data.width?data.width:480,
+            height:data.height?data.height:320,
             modal:true,
             href:data.href,
             minimizable:false,

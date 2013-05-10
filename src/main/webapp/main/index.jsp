@@ -199,7 +199,7 @@
                     <img src="${ctx}/img/delicious.png"> <a href="#" class="easyui-menubutton" data-options="menu:'#themeMenu',plain:true" >主题</a>
                     <img src="${ctx}/img/user_friend.png">  <a href="#" class="easyui-menubutton" data-options="menu:'#adminMenu',plain:true" >Admin</a>
                     <img src="${ctx}/img/information.png"> <a href="#" class="easyui-linkbutton" data-options="plain:true">消息(8)</a>
-                    <img src="${ctx}/img/arrow_right.png"> <a href="#" class="easyui-linkbutton" data-options="plain:true" onclick="f_logout();">退出系统</a>
+                    <img src="${ctx}/img/sign_out.png"> <a href="#" class="easyui-linkbutton" data-options="plain:true" onclick="f_logout();">退出系统</a>
                 </div>
             </div>
         </div>
