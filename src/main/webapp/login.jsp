@@ -20,11 +20,11 @@
                 <tr>
                     <td rowspan="4" align="center"><img src="${ctx}/img/logo-m.jpg"></td>
                     <td align="right">帐号：</td>
-                    <td><input type="text" name="username" id="username" class="easyui-validatebox" data-options="required:true" style="width: 180px;" value="ggs"></td>
+                    <td><input type="text" name="username" id="username" class="easyui-validatebox" required="required"  style="width: 180px;" value="ggs"></td>
                 </tr>
                 <tr>
                     <td align="right">密码：</td>
-                    <td><input type="password" name="password" id="password" class="easyui-validatebox" data-options="required:true" style="width: 180px;" value="123"></td>
+                    <td><input type="password" name="password" id="password" class="easyui-validatebox" required="required"  style="width: 180px;" value="123"></td>
                 </tr>
                 <tr>
                     <td align="right">自动登录：</td>
@@ -49,7 +49,7 @@
             $.messager.progress();
             window.setTimeout(function(){
                 $("#loginForm").form("submit",{
-                    url:"${ctx}/main/login.json",
+                    url:"${ctx}/main/json/login.json",
                     success:function(data){
                         var data = eval('(' + data + ')');  // change the JSON string to javascript object
                         if (data.success){

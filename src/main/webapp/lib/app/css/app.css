@@ -10,6 +10,6 @@ body,p,div,span,table{
 .header-bg {
     height:80px;
     overflow: hidden;
-    background:-webkit-gradient(linear, 0 0, 0 bottom, from(#E6E6E6), to(#ffffff));
-    filter: progid:DXImageTransform.Microsoft.gradient(startcolorstr=#E6E6E6,endcolorstr=#ffffff,gradientType=0);
+    background:-webkit-gradient(linear, 0 0, 0 bottom, from(#E6F0FF), to(#ffffff));
+    filter: progid:DXImageTransform.Microsoft.gradient(startcolorstr=#E6F0FF,endcolorstr=#ffffff,gradientType=0);
 }

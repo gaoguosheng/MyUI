@@ -15,7 +15,7 @@
         <c:set var="theme" value="${param.theme}" scope="session"></c:set>
     </c:when>
 </c:choose>
-<link rel="stylesheet" type="text/css" href="${ctx}/lib/easyui/themes/${theme==null?"bootstrap":theme}/easyui.css">
+<link rel="stylesheet" type="text/css" href="${ctx}/lib/easyui/themes/${theme==null?"default":theme}/easyui.css">
 <link rel="stylesheet" type="text/css" href="${ctx}/lib/easyui/themes/icon.css">
 <link rel="stylesheet" type="text/css" href="${ctx}/lib/easyui/portal/portal.css">
 <link rel="stylesheet" type="text/css" href="${ctx}/lib/zTree/css/zTreeStyle/zTreeStyle.css">
@@ -26,5 +26,6 @@
 <script type="text/javascript" src="${ctx}/lib/easyui/easyui-lang-zh_CN.js"></script>
 <script type="text/javascript" src="${ctx}/lib/easyui/portal/jquery.portal.js"></script>
 <script type="text/javascript" src="${ctx}/lib/zTree/js/jquery.ztree.all-3.5.min.js"></script>
+<script type="text/javascript" src="${ctx}/lib/ggs.js"></script>
 <script type="text/javascript" src="${ctx}/lib/app/js/app.js"></script>
 
